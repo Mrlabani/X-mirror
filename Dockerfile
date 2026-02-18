@@ -1,1 +1,5 @@
-FROM labani/x-mirror:latest
+FROM labani/x-mirror
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
+COPY . .
+CMD ["bash", "start.sh"]
